@@ -1,0 +1,12 @@
+g++ example.cpp ../lib/jsoncpp-1.8.3/src/jsoncpp.cpp ../src/*.cpp -I ../lib/libcurl-7.56.0/include/ -I ../lib/jsoncpp-1.8.3/include/ -I ../lib/libwebsockets-2.4.0/include/ -I ../lib/libbinacpp/include/ -I /usr/local/Cellar/openssl/1.0.2n/include/  -L ../lib/libbinacpp/lib/ -lcurl -lcrypto -lwebsockets
+
+danach sollte man ganz einfach das MAKEFILE ausführen
+
+Makefile haben wir wie folgt angepasst:
+
+default:
+	g++ example.cpp ../lib/jsoncpp-1.8.3/src/jsoncpp.cpp ../src/*.cpp -I ../lib/libcurl-7.56.0/include/ -I ../lib/jsoncpp-1.8.3/include/ -I ../lib/libwebsockets-2.4.0/include/ -I ../lib/libbinacpp/include/ -I /usr/local/Cellar/openssl/1.0.2n/include/  -L ../lib/libbinacpp/lib/ -lcurl -lcrypto -lwebsockets -o example
+  
+somit sollte eine example datei entstehen
+
+Getestet haben wirs auf apple da meine windows partion weg war.
